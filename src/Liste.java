@@ -7,11 +7,11 @@ public class Liste {
         premier = null;
         nbElements = 0;
     }
-/*
+
     public String toString() {
         String str = "[";
-        for (int i = 0; i < nbElements; i++)
-            str += tableau[i] + ", ";
+        for (Noeud courant = premier; courant != null; courant = courant.prochain)
+            str += courant.valeur + ", ";
         return str + "]";
     }
 
@@ -23,16 +23,26 @@ public class Liste {
         return nbElements == 0;
     }
 
-    public int getElementAt(int index) {
-        return tableau[index];
-    }
+//    public int getElementAt(int index) {
+//        return tableau[index];
+//    }
 
     public void ajouter(int valeur) {
-        if (nbElements == tableau.length)
-            resize();
-        tableau[nbElements++] = valeur;
-    }
+        //tableau[nbElements++] = valeur;
 
+        Noeud dernier = null;
+        for (Noeud courant = premier; courant != null; courant = courant.prochain)
+            dernier = courant;
+
+        if (premier == null) {
+            premier = new Noeud(valeur);
+        }
+        else {
+            dernier.prochain = new Noeud(valeur);
+        }
+        nbElements++;
+    }
+/*
     public void ajouter(int valeur, int index) {
         if (nbElements == tableau.length)
             resize();

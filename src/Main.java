@@ -1,7 +1,6 @@
 public class Main {
     public static void main(String[] args) {
         Liste data = new Liste();
-        /*
         System.out.println(data.getNbElements());
         System.out.println(data.estVide());
 
@@ -19,7 +18,7 @@ public class Main {
         data.ajouter(10);
         System.out.println(data);
         System.out.println(data.getNbElements());
-
+/*
         System.out.println("Test 3: Ajouter des valeurs à des index spécifiques");
         data.ajouter(-1, 0);
         data.ajouter( 5, 4);
