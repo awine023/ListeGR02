@@ -1,11 +1,10 @@
 public class Liste {
-    private int[] tableau;
+    private Noeud premier;
     private int nbElements;
-    private static final int RATIO_AGRANDISSEMENT = 2;
-    private static final int TAILLE_INITIALE = 5;
+
 
     public Liste() {
-        tableau = new int[TAILLE_INITIALE];
+        premier = null;
         nbElements = 0;
     }
 /*
